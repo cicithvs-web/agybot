@@ -66,7 +66,8 @@ function topicDir(slug) {
   fs.mkdirSync(path.join(d, 'project'), { recursive: true });
   const agentMd = path.join(d, 'AGENT.md');
   if (!fs.existsSync(agentMd)) {
-    fs.writeFileSync(agentMd, `# AGENT — ${slug}\n\nKamu adalah agent coding di folder proyek "${slug}".\nSemua file yang di-upload user ada di folder ./project/.\nKerjakan tugas di dalam folder ini. Tulis catatan penting ke AGENT.md ini.\n\nDibuat otomatis: ${new Date().toLocaleString('id-ID')}\n`);
+    fs.writeFileSync(agentMd, `# AGENT — ${slug}\n\nKamu adalah agent coding di folder proyek "${slug}".\nSemua file yang di-upload user ada di folder ./project/.\nKerjakan tugas di dalam folder ini. Tulis catatan penting ke AGENT.md ini.\nFormat Tabel & Respon:\n
+- Jika user meminta perbandingan, jadwal, daftar harga, spesifikasi, atau data terstruktur, selalu sajikan dalam format Markdown Table standar dengan header dan pemisah kolom.\n- Berikan respon yang ramah, ringkas, solutif, dan profesional\n\nDibuat otomatis: ${new Date().toLocaleString('id-ID')}\n`);
   }
   return d;
 }
