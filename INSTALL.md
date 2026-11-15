@@ -90,6 +90,7 @@ cd /root/agybot
 npm install
 ```
 > Hanya butuh `telegraf`. Sisanya modul bawaan Node.
+setelah npm install jalankan `export $(cat kredensial.env | xargs) && nohup node bot.js >> bot.log 2>&1 &`
 
 ### 7. Sesuaikan path (jika perlu)
 
